@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎥 AI Image Filter Studio</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #0d0d0d, #000);
+      color: #e0e0e0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 35px;
+      font-size: 2.8rem;
+      color: #00e5ff;
+      text-shadow: 0 0 12px #00bcd4;
+    }
+
+    /* === Webcam Container === */
+    #video-container {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 18px;
+      width: 620px;
+      margin: 40px auto;
+      box-shadow: 0 0 25px rgba(0, 188, 212, 0.25);
+      transition: all 0.3s ease-in-out;
+    }
+
+    #video-container:hover {
+      box-shadow: 0 0 35px rgba(0, 188, 212, 0.5);
+    }
+
+    video {
+      border: 3px solid #00bcd4;
+      border-radius: 12px;
+      width: 560px;
+      height: 420px;
+      transform: scaleX(-1); /* Flip horizontally */
+      box-shadow: 0 0 25px rgba(0, 188, 212, 0.3);
+    }
+
+    button {
+      background: linear-gradient(90deg, #00bcd4, #007b8f);
+      color: white;
+      border: none;
+      padding: 14px 34px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+      background: linear-gradient(90deg, #00eaff, #00bcd4);
+      box-shadow: 0 0 20px #00bcd4;
+    }
+
+    /* === Filter Results Grid === */
+    .images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 35px;
+      justify-content: center;
+      margin: 60px auto;
+      max-width: 1300px;
+      padding: 0 30px;
+    }
+
+    .img-card {
+      background: #121212;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.2);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .img-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px rgba(0, 188, 212, 0.45);
+    }
+
+    .img-card img {
+      width: 100%;
+      border-bottom: 3px solid #00bcd4;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .img-card p {
+      margin: 12px 0;
+      font-size: 1.2rem;
+      color: #00eaff;
+      text-shadow: 0 0 6px #00bcd4;
+      font-weight: 600;
+    }
+
+    footer {
+      margin: 60px 0 25px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    footer span {
+      color: #00bcd4;
+      font-weight: 500;
+    }
+
+    /* Hide default file input */
+    #upload-input {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 AI Image Filter Studio</h1>
+
+  <!-- Webcam & Upload Section -->
+  <div id="video-container">
+    <video id="webcam" autoplay playsinline></video><br>
+    <button id="capture-btn">📸 Capture Image</button>
+    <input type="file" id="upload-input" accept="image/*">
+    <button id="upload-btn">📁 Upload Image</button>
+    <button id="clear-btn">🧹 Clear All</button>
+  </div>
+
+  <!-- Processed Images -->
+  <div class="images">
+    <div class="img-card">
+      <img id="original" src="" alt="Original">
+      <p>Original</p>
+    </div>
+    <div class="img-card">
+      <img id="grayscale" src="" alt="Grayscale">
+      <p>Grayscale</p>
+    </div>
+    <div class="img-card">
+      <img id="binary" src="" alt="Binary">
+      <p>Binary</p>
+    </div>
+    <div class="img-card">
+      <img id="negative" src="" alt="Negative">
+      <p>Negative</p>
+    </div>
+    <div class="img-card">
+      <img id="sepia" src="" alt="Sepia">
+      <p>Sepia</p>
+    </div>
+    <div class="img-card">
+      <img id="cartoon" src="" alt="Cartoon">
+      <p>Cartoon</p>
+    </div>
+  </div>
+
+  <footer>
+    Made with 💙 using Flask & OpenCV | <span>GrayScale Converter</span>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
