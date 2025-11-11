@@ -1,4 +1,4 @@
-🎨 ImageFilterStudio
+🎨 #ImageFilterStudio
 
 ImageFilterStudio is a simple web-based image processing app built with Flask and OpenCV.
 It allows users to upload or capture an image and apply various visual filters including:
@@ -13,7 +13,7 @@ Sepia
 
 Cartoon
 
-🚀 Features
+🚀 #Features
 
 Upload image or use live camera
 
@@ -25,7 +25,7 @@ Responsive and minimal UI
 
 Built with Python, Flask, OpenCV, HTML, CSS, JavaScript
 
-🧰 Tech Stack
+🧰 #Tech Stack
 
 Frontend: HTML, CSS, JavaScript
 
