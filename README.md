@@ -1,19 +1,36 @@
-# 🎨 Grayscale Web App
-A simple Flask web application that converts images (from webcam or upload) into multiple styles — **Grayscale, Binary, Negative, Sepia, and Cartoon**.
+🎨 ImageFilterStudio
 
-## 🚀 Features
-- Capture live image from webcam 🖼️  
-- Upload image from your device 📁  
-- Apply multiple filters automatically  
-- Clear button to reset results  
-- Mirror-corrected camera view  
+ImageFilterStudio is a simple web-based image processing app built with Flask and OpenCV.
+It allows users to upload or capture an image and apply various visual filters including:
 
-## 🧩 Tech Stack
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Flask (Python)  
-- **Libraries:** OpenCV, NumPy  
+Grayscale
 
-## ⚙️ Installation
-```bash
-pip install -r requirements.txt
-python app.py
+Binary
+
+Negative
+
+Sepia
+
+Cartoon
+
+🚀 Features
+
+Upload image or use live camera
+
+View 6 image variations side-by-side
+
+Auto-save filtered images
+
+Responsive and minimal UI
+
+Built with Python, Flask, OpenCV, HTML, CSS, JavaScript
+
+🧰 Tech Stack
+
+Frontend: HTML, CSS, JavaScript
+
+Backend: Flask (Python)
+
+Libraries: OpenCV, NumPy
+
+Runtime: Python 3.x
