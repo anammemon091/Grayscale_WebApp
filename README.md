@@ -1,36 +1,46 @@
-🎨 #ImageFilterStudio
+# 🎨 Image Filter Studio
 
-ImageFilterStudio is a simple web-based image processing app built with Flask and OpenCV.
-It allows users to upload or capture an image and apply various visual filters including:
+A simple yet powerful **Flask + OpenCV** web app that applies multiple filters to images captured via **webcam** or uploaded from your device.  
 
-Grayscale
+You can instantly generate:
+- 🖤 Grayscale  
+- ⚫ Binary  
+- 🌑 Negative  
+- ☕ Sepia  
+- 🎭 Cartoon  
 
-Binary
+---
 
-Negative
+## 🚀 Features
+✅ Real-time webcam capture  
+✅ Upload your own images  
+✅ Six built-in AI filters  
+✅ Clean, modern dark UI  
+✅ Auto-save processed images  
+✅ Fully responsive design  
 
-Sepia
+---
 
-Cartoon
+## 🧠 Tech Stack
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Flask (Python)  
+- **Image Processing:** OpenCV, NumPy  
+- **Other Tools:** Base64, JSON  
 
-🚀 #Features
+---
 
-Upload image or use live camera
-
-View 6 image variations side-by-side
-
-Auto-save filtered images
-
-Responsive and minimal UI
-
-Built with Python, Flask, OpenCV, HTML, CSS, JavaScript
-
-🧰 #Tech Stack
-
-Frontend: HTML, CSS, JavaScript
-
-Backend: Flask (Python)
-
-Libraries: OpenCV, NumPy
-
-Runtime: Python 3.x
+## 🗂️ Project Structure
+ImageFilterStudio/
+│
+├── static/
+│ ├── script.js
+│ ├── style.css
+│ ├── uploads/
+│ └── processed/
+│
+├── templates/
+│ └── index.html
+│
+├── app.py
+├── requirements.txt
+└── README.md
